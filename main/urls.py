@@ -26,6 +26,7 @@ urlpatterns = [
     path('aluno/criar/', views.AlunoCriar.as_view(), name='aluno_criar'),
     path('aluno/remover/<int:id>/', views.AlunoRemover.as_view(), name='aluno_remover'),
     path('aluno/listar/', views.AlunoListar.as_view(), name='aluno_listar'),
+    
     path('hospedagem/listar/', HospedagemList.as_view(), name='hospedagem_listar'),
     path('hospedagem/criar/', HospedagemCreate.as_view(), name='hospedagem_criar'),
     path('hospedagem/editar/<int:pk>/', HospedagemUpdate.as_view(), name='hospedagem_editar'),

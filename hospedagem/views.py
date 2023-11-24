@@ -25,8 +25,7 @@ class HospedagemUpdate(UpdateView):
 
 class HospedagemDelete(DeleteView):
     model = Hospedagem
-    template_name = 'hospedagem/hospedagem_confirm_delete.html'
     success_url = reverse_lazy('hospedagem_listar')
     
     def get(self, request, *args, **kwargs):
-        return self.post(request, *args, **kwargs)
+        return self.delete(request, *args, **kwargs)
